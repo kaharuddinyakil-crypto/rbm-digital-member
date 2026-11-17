@@ -3,57 +3,274 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#17152f">
-  <meta name="description" content="RBM Digital Member. Pendaftaran dan kartu member digital RBM.">
-  <title>RBM Digital Member</title>
-  <link rel="stylesheet" href="/styles.css">
+  <meta name="theme-color" content="#2814F5">
+  <meta name="description" content="EXPHONE Member — kartu digital dan tambahan diskon 5% untuk penggantian sparepart iPhone di Exphone Service Jayapura.">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="EXPHONE">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Exphone Service Jayapura | Digital Member</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="/icons/exphone-electric.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/icons/favicon-cobalt.png">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon-cobalt.png">
+  <link rel="stylesheet" href="/styles.css?v=exp-responsive-20261116-v2">
+  <link rel="stylesheet" href="/electric-editorial.css?v=exp-responsive-20261116-v2">
+  <link rel="stylesheet" href="/exphone-refinements.css?v=exp-refine-20261116-v4">
+  <link rel="stylesheet" href="/exp-responsive-fix.css?v=exp-responsive-20261116-v2">
+  <link rel="stylesheet" href="/hero-floating-visual.css?v=exp-hero-20261116-v2">
+  <link rel="stylesheet" href="/mobile-stability.css?v=exp-mobile-20261116-v2">
+  <link rel="stylesheet" href="/home-access-polish.css?v=exp-home-access-20261117-v2">
+  <link rel="stylesheet" href="/site-final-fixes.css?v=exp-hero-responsive-blue-20261117-v14">
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script defer src="https://unpkg.com/html5-qrcode"></script>
-  <script defer src="/app.js"></script>
+  <script defer src="/app.js?v=exp-history-spa-20261117-v7"></script>
+
 </head>
 <body>
   <div class="ambient ambient-a" aria-hidden="true"></div>
   <div class="ambient ambient-b" aria-hidden="true"></div>
 
   <header class="topbar">
-    <a class="brand" href="/" aria-label="RBM Digital Member, beranda">
-      <span class="brand-symbol">R</span>
-      <span class="brand-text">
-        <strong>RBM</strong>
-        <small>DIGITAL MEMBER</small>
-      </span>
+    <a class="brand" href="/" aria-label="EXPHONE SERVICE JAYAPURA">
+      <span class="brand-symbol brand-symbol-wide"><img src="/assets/logo-exphone-exp.svg" alt=""></span>
+      <span class="brand-text"><strong>EXPHONE</strong><small>SERVICE JAYAPURA</small></span>
     </a>
-    <nav class="top-nav" aria-label="Navigasi utama">
-      <a href="/" data-nav="register">Pendaftaran</a>
-      <a href="/?page=admin" data-nav="admin">Admin</a>
-    </nav>
+    <div class="topbar-side" hidden>
+      <a id="globalBackLink" class="topbar-home-link" href="/" onclick="return navigateBack(event)" aria-label="Kembali ke halaman sebelumnya">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M19 12H5m7 7-7-7 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Kembali</span>
+      </a>
+    </div>
   </header>
 
   <main class="site-main">
+    <!-- Halaman utama: satu pintu  untuk customer dan admin -->
+    <section id="homePage" class="page" hidden>
+      <div class="home-layout">
+        <section class="home-hero" aria-labelledby="homeHeroTitle">
+          <div class="home-hero-grid" aria-hidden="true"></div>
+          <div class="home-hero-main">
+            <div class="home-hero-left">
+            <div class="home-hero-copy">
+              <span class="home-kicker"><i></i> Exphone Member <b>·</b> Jayapura</span>
+              <h1 id="homeHeroTitle">SERVICE IPHONE<br><span>JADI LEBIH HEMAT!</span></h1>
+              <p class="home-promo-description">
+                Dapatkan <strong class="home-discount-copy"><span class="home-discount-highlight">DISKON TAMBAHAN 5%</span></strong>
+                untuk penggantian sparepart iPhone di Exphone Service Jayapura.
+                <span class="home-promo-support">Pilih Pendaftaran, Login Member, atau Admin/Kasir untuk melanjutkan.</span>
+              </p>
+            </div>
+
+        <section class="home-actions-section home-actions-shortcut" id="memberActions" aria-label="Akses cepat EXPHONE">
+          <nav class="home-options" aria-label="Pilih layanan EXPHONE">
+            <a class="home-option home-option-primary" href="/?page=register" aria-label="Buka halaman pendaftaran member EXPHONE">
+              <span class="home-option-mark" aria-hidden="true">
+                <svg class="home-option-icon" viewBox="0 0 24 24" fill="none">
+                  <circle cx="9" cy="8" r="3.5" stroke="currentColor" stroke-width="1.7"/>
+                  <path d="M3.5 20v-1.7A4.3 4.3 0 0 1 7.8 14h2.4a4.3 4.3 0 0 1 4.3 4.3V20M18 8v7M14.5 11.5h7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                </svg>
+                <span class="home-option-index">01</span>
+              </span>
+              <span class="home-option-copy">
+                <strong>PENDAFTARAN</strong>
+                <small>Daftar dan buat kartu member digital Anda.</small>
+                <span class="home-option-caption">MULAI KEANGGOTAAN</span>
+              </span>
+              <span class="home-option-arrow-wrap" aria-hidden="true">
+                <svg class="home-option-arrow" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+            <a class="home-option home-option-member" href="/?page=login" aria-label="Buka halaman login member EXPHONE">
+              <span class="home-option-mark" aria-hidden="true">
+                <svg class="home-option-icon" viewBox="0 0 24 24" fill="none">
+                  <rect x="3.5" y="4.5" width="17" height="15" rx="3" stroke="currentColor" stroke-width="1.7"/>
+                  <circle cx="9" cy="10" r="2.2" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M5.8 16.2a3.5 3.5 0 0 1 6.4 0M15 9h3M15 13h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                <span class="home-option-index">02</span>
+              </span>
+              <span class="home-option-copy">
+                <strong>LOGIN MEMBER</strong>
+                <small>Temukan dan buka kembali kartu member digital Anda.</small>
+                <span class="home-option-caption">AKSES KARTU DIGITAL</span>
+              </span>
+              <span class="home-option-arrow-wrap" aria-hidden="true">
+                <svg class="home-option-arrow" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+            <a class="home-option home-option-admin" href="/?page=admin" aria-label="Buka halaman admin dan kasir EXPHONE">
+              <span class="home-option-mark" aria-hidden="true">
+                <svg class="home-option-icon" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3 20 6v5.2c0 4.7-3.1 8.1-8 9.8-4.9-1.7-8-5.1-8-9.8V6l8-3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                  <path d="m8.7 11.8 2.2 2.2 4.5-4.7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="home-option-index">03</span>
+              </span>
+              <span class="home-option-copy">
+                <strong>ADMIN / KASIR</strong>
+                <small>Masuk untuk memindai QR dan mengelola data member.</small>
+                <span class="home-option-caption">AREA PENGELOLAAN</span>
+              </span>
+              <span class="home-option-arrow-wrap" aria-hidden="true">
+                <svg class="home-option-arrow" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+          </nav>
+        </section>
+              <div class="home-hero-proof" aria-label="Slogan Exphone Service Jayapura">
+                <span class="proof-mark" aria-hidden="true">EXP</span>
+                <span><strong>EXPHONE SERVICE JAYAPURA</strong><small>Merawat yang Berharga untuk Anda.</small></span>
+              </div>
+            </div>
+
+            <div class="home-visual" role="img" aria-label="Ilustrasi kartu member digital Exphone dengan ponsel dan kartu diskon lima persen">
+              <div class="visual-grid" aria-hidden="true"></div>
+              <div class="visual-orbit visual-orbit-one" aria-hidden="true"></div>
+              <div class="visual-orbit visual-orbit-two" aria-hidden="true"></div>
+              <div class="visual-plus plus-one" aria-hidden="true">+</div>
+              <div class="visual-plus plus-two" aria-hidden="true">+</div>
+              <div class="visual-phone" aria-hidden="true">
+                <div class="visual-phone-camera"></div>
+                <div class="visual-phone-screen">
+                  <span class="visual-screen-kicker">EXPHONE SERVICE</span>
+                  <img class="visual-screen-logo" src="/assets/logo-exphone-exp.svg" alt="">
+                  <span class="visual-screen-line"></span>
+                  <span class="visual-screen-caption">MEMBER VIP<br>JAYAPURA</span>
+                  <span class="visual-screen-dot"></span>
+                </div>
+              </div>
+              <div class="visual-member-card" aria-hidden="true">
+                <div class="visual-card-top">
+                  <img src="/assets/logo-exphone-exp.svg" alt="">
+                  <small>MEMBER VIP</small>
+                </div>
+                <div class="visual-card-mid"><small>EXTRA MEMBER BENEFIT</small><strong>Disc 5%</strong></div>
+                <div class="visual-card-bottom"><span>EXPHONE SERVICE</span><i class="arrow-mark" aria-hidden="true"></i></div>
+              </div>
+              <div class="visual-sticker" aria-hidden="true"><span>VIP</span><strong>MEMBER<br>ACCESS</strong><i class="arrow-mark" aria-hidden="true"></i></div>
+              <div class="visual-caption" aria-hidden="true">DIGITAL MEMBERSHIP / 001</div>
+            </div>
+          </div>
+
+          <div class="home-hero-index" aria-hidden="true"><span>01</span><i></i><span>03</span></div>
+        </section>
+
+
+
+        <div class="home-ticker" aria-label="Keuntungan member EXPHONE">
+          <div class="ticker-track">
+            <span>Tambahan diskon 5%</span><b class="ticker-mark" aria-hidden="true"></b><span>Kartu member digital</span><b class="ticker-mark" aria-hidden="true"></b><span>Exphone Service Jayapura</span><b class="ticker-mark" aria-hidden="true"></b>
+            <span>Tambahan diskon 5%</span><b class="ticker-mark" aria-hidden="true"></b><span>Kartu member digital</span><b class="ticker-mark" aria-hidden="true"></b><span>Exphone Service Jayapura</span><b class="ticker-mark" aria-hidden="true"></b>
+          </div>
+        </div>
+
+        <section class="home-benefits" id="memberBenefits" aria-labelledby="benefitsTitle">
+          <div class="home-section-heading">
+            <div>
+              <span class="editorial-kicker">Keuntungan member <i></i></span>
+              <h2 id="benefitsTitle">Lebih hemat,<br><span>Lebih praktis.</span></h2>
+            </div>
+            <p>Sebagai member, Anda memperoleh akses eksklusif beserta kartu member digital pribadi yang praktis digunakan kapan saja di Exphone Service Jayapura.</p>
+          </div>
+          <div class="benefit-grid">
+            <article class="benefit-card benefit-card-main">
+              <div class="benefit-card-top"><span>01 / Benefit Member</span><span class="benefit-symbol">01</span></div>
+              <strong class="benefit-number">Disc 5%</strong>
+              <h3>Potongan Harga Khusus Member</h3>
+              <p>Nikmati potongan harga tambahan 5% untuk penggantian sparepart iPhone di seluruh cabang Exphone Service Jayapura cukup dengan menunjukkan kartu member digital saat transaksi.</p>
+              <div class="benefit-card-line"></div>
+            </article>
+            <article class="benefit-card benefit-card-blue">
+              <div class="benefit-card-top"><span>02 / Kartu Digital</span><span class="benefit-symbol">02</span></div>
+              <div class="benefit-icon-card"><span>EXP</span><i>VIP</i></div>
+              <h3>Kartu VIP Digital</h3>
+              <p>Akses kartu member langsung dari perangkat Anda kapan saja, dan tunjukkan kepada Admin saat bertransaksi di Exphone Service Jayapura.</p>
+            </article>
+            <article class="benefit-card benefit-card-light">
+              <div class="benefit-card-top"><span>03 / Praktis</span><span class="benefit-symbol">03</span></div>
+              <div class="benefit-steps"><b>01</b><i></i><b>02</b><i></i><b>03</b></div>
+              <h3>Praktis saat servis</h3>
+              <p>Gunakan kartu digital atau QR untuk menunjukkan status keanggotaan saat penggantian sparepart iPhone.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="home-process-section" id="memberProcess" aria-labelledby="processTitle">
+          <div class="home-section-heading">
+            <div>
+              <span class="editorial-kicker">Cara menggunakan kartu <i></i></span>
+              <h2 id="processTitle">Tiga langkah sederhana</h2>
+            </div>
+            <p>Mulai dari pendaftaran hingga menggunakan kartu digital saat transaksi.</p>
+          </div>
+          <div class="home-process-grid">
+            <article class="home-process-card">
+              <span class="home-process-number">01</span>
+              <div><h3>Daftar sebagai member</h3><p>Isi nama lengkap dan nomor WhatsApp aktif pada halaman Pendaftaran.</p></div>
+            </article>
+            <article class="home-process-card">
+              <span class="home-process-number">02</span>
+              <div><h3>Buka kartu digital</h3><p>Setelah pendaftaran berhasil, buka tautan kartu dan simpan di ponsel Anda.</p></div>
+            </article>
+            <article class="home-process-card">
+              <span class="home-process-number">03</span>
+              <div><h3>Tunjukkan saat transaksi</h3><p>Perlihatkan kartu digital atau QR kepada kasir saat penggantian sparepart iPhone.</p></div>
+            </article>
+          </div>
+        </section>
+
+        <div id="savedMemberShortcut" class="saved-member-shortcut" hidden>
+          <div class="saved-member-shortcut-copy">
+            <span class="saved-member-shortcut-kicker">Akses cepat member</span>
+            <strong>Kartu member Anda tersimpan di perangkat ini.</strong>
+            <small>Buka kembali kartu digital tanpa perlu mencari tautannya.</small>
+          </div>
+          <a id="savedMemberShortcutLink" class="button button-primary" href="/">
+            Buka Kartu Member Saya
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <button id="clearSavedMemberShortcut" class="saved-member-clear" type="button">Hapus akses kartu dari perangkat ini</button>
+        </div>
+        <p class="home-footnote">Exphone Service Jayapura <span>—</span> MERAWAT YANG BERHARGA UNTUK ANDA.</p>
+      </div>
+    </section>
+
     <!-- Halaman pendaftaran member -->
     <section id="registerPage" class="page" hidden>
       <div class="register-layout">
-        <div class="hero-copy">
-          <span class="eyebrow"><span class="eyebrow-dot"></span> RBM MEMBERSHIP</span>
-          <h1>Keanggotaan RBM, kini lebih <span>praktis.</span></h1>
-          <p class="hero-description">Daftarkan diri untuk mendapatkan kartu member digital RBM. Kartu dapat dibuka kembali melalui tautan pribadi dan ditunjukkan saat diperlukan.</p>
+        <div class="hero-copy register-hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Exphone Service Jayapura</span>
+          <h1>Join the<br><span>VIP side!</span></h1>
+          <p class="hero-description registration-promo-description">Bergabung sebagai member Exphone Service Jayapura dan nikmati tambahan diskon 5% untuk penggantian sparepart iPhone. Tunjukkan kartu digital saat bertransaksi.</p>
+          <div class="register-perk-highlight">
+            <strong>05<span>%</span></strong>
+            <span><b>Tambahan diskon member</b><small>Untuk penggantian sparepart iPhone</small></span>
+          </div>
           <div class="hero-signature">
             <span class="signature-line"></span>
-            <span>Simple access. Personal membership.</span>
+            <span>Merawat yang berharga untuk Anda.</span>
           </div>
           <div class="hero-decoration" aria-hidden="true">
             <div class="orbit orbit-one"></div>
             <div class="orbit orbit-two"></div>
-            <div class="orbit-core">RBM</div>
+            <div class="orbit-core">EXP</div>
           </div>
         </div>
 
         <section class="surface register-surface" aria-labelledby="registerTitle">
           <div class="surface-heading">
             <div>
-              <span class="section-kicker">MEMBER REGISTRATION</span>
-              <h2 id="registerTitle">Daftar Member</h2>
+              <span class="section-kicker">Pendaftaran member</span>
+              <h2 id="registerTitle">Daftar member</h2>
               <p>Isi informasi berikut dengan benar.</p>
             </div>
             <span class="heading-icon" aria-hidden="true">
@@ -68,16 +285,61 @@
             <label for="regPhone">Nomor WhatsApp <span>*</span></label>
             <input id="regPhone" name="phone" required maxlength="30" inputmode="tel" autocomplete="tel" placeholder="08xxxxxxxxxx">
 
-            <label for="regEmail">Email <small>(opsional)</small></label>
-            <input id="regEmail" name="email" type="email" maxlength="120" autocomplete="email" placeholder="nama@email.com">
-
             <button id="regBtn" class="button button-primary" type="submit">
               <span>Buat Kartu Member</span>
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
           </form>
           <div id="regMsg" class="message" aria-live="polite"></div>
-          <p class="form-footnote"><span class="secure-dot"></span> Data pendaftaran digunakan untuk keanggotaan RBM.</p>
+          <p class="form-footnote"><span class="secure-dot"></span> Data pendaftaran digunakan untuk keanggotaan Exphone Service Jayapura.</p>
+        </section>
+      </div>
+    </section>
+
+
+    <!-- Halaman login customer -->
+    <section id="customerLoginPage" class="page" hidden>
+      <div class="customer-login-layout">
+        <div class="customer-login-visual">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Akses Member</span>
+          <h1>Member access<br><span>Welcome back.</span></h1>
+          <p>Masukkan nomor WhatsApp untuk membuka kembali kartu member Anda.</p>
+          <div class="login-card-art" aria-hidden="true">
+            <div class="login-card-art-top"><span>EXP</span><small>Member VIP</small></div>
+            <div class="login-card-art-middle"><small>Keuntungan member</small><strong>Disc 5%</strong></div>
+            <div class="login-card-art-bottom"><span>Exphone Service Jayapura</span><i class="arrow-mark" aria-hidden="true"></i></div>
+          </div>
+          <div class="login-visual-note"><span>01</span><i></i><span>Kartu digital Anda</span></div>
+        </div>
+
+        <section class="surface customer-login-surface" aria-labelledby="customerLoginTitle">
+          <div class="surface-heading">
+            <div>
+              <span class="section-kicker"> member</span>
+              <h2 id="customerLoginTitle">Temukan Kartu Anda</h2>
+              <p>Masukkan nomor WhatsApp yang digunakan saat pendaftaran.</p>
+            </div>
+            <span class="heading-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M16 20v-1.5a4.5 4.5 0 0 0-4.5-4.5h-3A4.5 4.5 0 0 0 4 18.5V20M10 10.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM18 8v6M15 11h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+
+          <form id="customerLoginForm" class="form-stack">
+            <label for="customerName">Nama member <small>(opsional)</small></label>
+            <input id="customerName" name="name" maxlength="100" autocomplete="name" placeholder="Masukkan nama untuk mencari kartu Anda">
+
+            <label for="customerPhone">Nomor WhatsApp terdaftar <span>*</span></label>
+            <input id="customerPhone" name="phone" type="tel" required maxlength="30" inputmode="tel" autocomplete="tel" placeholder="08xxxxxxxxxx">
+
+            <button id="customerLoginBtn" class="button button-primary" type="submit">
+              <span>Temukan Kartu Saya</span>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </form>
+
+          <div id="customerLoginMsg" class="customer-login-status" aria-live="polite"></div>
+          <div id="customerCards" class="customer-card-list" aria-live="polite"></div>
+          <p class="form-footnote"><span class="secure-dot"></span> Gunakan nomor yang sama dengan data pendaftaran. Format 08, 628, dan +62 didukung.</p>
         </section>
       </div>
     </section>
@@ -85,120 +347,206 @@
     <!-- Halaman kartu digital member -->
     <section id="cardPage" class="page" hidden>
       <div class="page-heading centered-heading">
-        <span class="section-kicker">YOUR DIGITAL MEMBERSHIP</span>
-        <h1>Kartu Member <span>RBM</span></h1>
-        <p>Tunjukkan QR Code ini kepada admin RBM saat diperlukan.</p>
+        <span class="section-kicker">Your Digital Repair Membership</span>
+        <h1>Kartu Member <span>EXP</span></h1>
+        <p>Tunjukkan kartu digital atau kode QR ini kepada kasir saat transaksi.</p>
       </div>
 
       <div id="cardLoading" class="loading-panel"><span class="loader"></span><span>Memuat kartu member...</span></div>
       <div id="cardContent" hidden>
         <div class="card-stage">
-          <div class="card-back card-back-one" aria-hidden="true"></div>
-          <div class="card-back card-back-two" aria-hidden="true"></div>
-          <article class="member-card" id="memberCard" aria-label="Kartu digital member RBM">
+          <article class="member-card" id="memberCard" aria-label="Kartu digital member Exphone Service Jayapura">
             <div class="card-glow" aria-hidden="true"></div>
             <div class="card-topline">
               <div class="card-brand">
-                <span class="card-brand-mark">R</span>
-                <span><strong>RBM</strong><small>MEMBERSHIP</small></span>
+                <span class="card-brand-mark" aria-label="Logo EXP"><img src="/assets/logo-exphone-exp.svg" alt=""></span>
+                <span><strong>Exphone Service</strong><small>Jayapura</small></span>
               </div>
-              <span class="card-type">DIGITAL MEMBER</span>
+              <span class="card-type">Member digital</span>
             </div>
             <div class="card-middle">
               <div class="card-details">
-                <span class="card-label">MEMBER NAME</span>
+                <span class="card-label">Nama member</span>
                 <h2 id="cardName">-</h2>
-                <span class="card-label card-id-label">MEMBER ID</span>
+                <span class="card-label card-id-label">ID member</span>
                 <p id="cardId" class="card-id">-</p>
-                <span id="cardStatus" class="card-status">AKTIF</span>
+                <span id="cardStatus" class="card-status">Aktif</span>
               </div>
               <div class="card-qr-wrap">
                 <div id="qr" class="card-qr"></div>
-                <span>SCAN MEMBER</span>
+                <span>Pindai QR</span>
               </div>
             </div>
             <div class="card-bottomline">
-              <span>RBM DIGITAL MEMBER CARD</span>
-              <span class="card-bottom-mark">RBM <i></i></span>
+              <span>EXP Kartu member digital</span>
+              <span class="card-bottom-mark">EXP <i></i></span>
             </div>
           </article>
         </div>
 
         <div class="card-actions">
-          <button id="saveCardBtn" class="button button-primary" type="button" onclick="saveCardToPhone()">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M4 17v3h16v-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Simpan Kartu ke HP
+          <button id="saveCardBtn" class="button button-primary" type="button" onclick="installEXPHONEApp()">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="2.8" width="12" height="18.4" rx="2.3" stroke="currentColor" stroke-width="1.7"/><path d="M10 18h4M12 6.5v5m0 0 2.2-2.2M12 11.5 9.8 9.3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Tambahkan kartu member ke layar utama
           </button>
           <button class="button button-light" type="button" onclick="shareCardLink()">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 15V3m0 0L8 7m4-4 4 4M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Bagikan Link Kartu
+            Bagikan link kartu
+          </button>
+          <button id="showCardQrBtn" class="button button-outline card-qr-popup-button" type="button" onclick="openCardQrPopup()">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2v2h-2zM18 14h2v2h-2zM14 18h2v2h-2zM18 18h2v2h-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            Tampilkan QR kartu
           </button>
         </div>
-        <div id="saveMsg" class="save-message" aria-live="polite">Simpan kartu sebagai gambar agar mudah dibuka kembali dari Galeri atau Foto HP.</div>
-        <a id="cardImageLink" class="image-link" href="#" target="_blank" rel="noopener" hidden>Buka gambar kartu untuk disimpan</a>
+        <div id="qrCardModal" class="qr-card-modal" hidden>
+          <button class="qr-card-backdrop" type="button" data-qr-close aria-label="Tutup popup QR"></button>
+          <section class="qr-card-sheet" role="dialog" aria-modal="true" aria-labelledby="qrCardTitle" aria-describedby="qrCardInstruction">
+            <div class="qr-sheet-handle" aria-hidden="true"></div>
+            <div class="qr-sheet-heading">
+              <div>
+                <span class="section-kicker">QR Member</span>
+                <h2 id="qrCardTitle">QR Kartu Member</h2>
+              </div>
+              <button class="qr-sheet-close" type="button" data-qr-close aria-label="Tutup popup">×</button>
+            </div>
+            <p id="qrCardInstruction">Kasir dapat memindai QR ini melalui kamera HP. PIN admin diperlukan sebelum data member ditampilkan.</p>
+            <div class="qr-popup-frame"><div id="qrPopup" class="qr-popup-code" aria-label="QR Code kartu digital"></div></div>
+            <div class="qr-popup-member">
+              <strong id="qrPopupName">-</strong>
+              <small id="qrPopupId">-</small>
+            </div>
+          </section>
+        </div>
+        <div id="saveMsg" class="save-message" aria-live="polite"></div>
+
+        <div id="expInstallModal" class="exp-install-modal" hidden>
+          <button class="exp-install-backdrop" type="button" data-exp-install-close aria-label="Tutup dialog pemasangan"></button>
+          <section class="exp-install-dialog" role="dialog" aria-modal="true" aria-labelledby="expInstallTitle" aria-describedby="expInstallDescription">
+            <button class="exp-install-close" type="button" data-exp-install-close aria-label="Tutup">×</button>
+            <div class="exp-install-brand"><span class="exp-install-logo" aria-hidden="true">EXP</span><small>Exphone Service Jayapura</small></div>
+            <div class="exp-install-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><rect x="11" y="4.5" width="26" height="39" rx="6" stroke="currentColor" stroke-width="2.4"/><path d="M24 13v14m0-14-5 5m5-5 5 5M19 33h10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="exp-install-kicker">Exphone member digital</span>
+            <h2 id="expInstallTitle">Tambahkan kartu member ke layar utama</h2>
+            <p id="expInstallDescription" class="exp-install-description"></p>
+            <div id="expInstallSteps" class="exp-install-steps"></div>
+            <button id="expInstallPrimary" class="button button-primary exp-install-primary" type="button">Mengerti</button>
+            <button id="expInstallSecondary" class="exp-install-secondary" type="button" hidden></button>
+          </section>
+        </div>
       </div>
       <div id="cardError" class="message message-error" aria-live="polite"></div>
-      <div class="page-bottom-link"><a href="/">Kembali ke halaman RBM</a></div>
     </section>
 
     <!-- Halaman admin -->
     <section id="adminPage" class="page" hidden>
       <section id="adminLogin" class="surface admin-login-surface">
         <div class="admin-login-art" aria-hidden="true">
+          <div class="admin-art-grid"></div>
           <div class="admin-art-ring ring-a"></div>
           <div class="admin-art-ring ring-b"></div>
-          <div class="admin-art-monogram">R</div>
+          <div class="admin-art-monogram" aria-label="EXPHONE SERVICE JAYAPURA">
+            <img src="/assets/logo-exphone-exp.svg" alt="">
+            <span class="admin-art-wordmark"><strong>EXPHONE</strong><small>SERVICE JAYAPURA</small></span>
+          </div>
+          <div class="admin-art-title">Member<br><span>Management.</span></div>
+          <div class="admin-art-foot"><i></i> Akses Admin</div>
         </div>
         <div class="admin-login-content">
-          <span class="section-kicker">RBM MANAGEMENT</span>
-          <h1>Admin <span>Portal</span></h1>
-          <p>Masukkan PIN admin untuk membuka dashboard dan mengelola data member RBM.</p>
+          <span class="section-kicker">Pengelolaan Member</span>
+          <h1>Admin <span>Exphone</span></h1>
+          <p>Masukkan PIN admin untuk membuka dashboard dan mengelola data member Exphone Service Jayapura.</p>
           <form id="adminLoginForm" class="form-stack">
             <label for="pin">PIN Admin</label>
-            <input id="pin" type="password" autocomplete="off" inputmode="numeric" placeholder="Masukkan PIN admin" required>
-            <button id="loginBtn" class="button button-primary" type="submit">Masuk ke Dashboard <span aria-hidden="true">→</span></button>
+            <input id="pin" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" inputmode="text" maxlength="64" placeholder="Masukkan PIN Admin" required>
+            <button id="loginBtn" class="button button-primary" type="submit">
+              <span>Masuk ke Dashboard</span>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
           </form>
           <div id="loginMsg" class="message message-error" aria-live="polite"></div>
         </div>
       </section>
 
       <section id="adminDashboard" hidden>
-        <div class="dashboard-heading">
+        <div class="admin-dashboard-shell">
+          <aside class="admin-sidebar">
+            <a class="admin-sidebar-brand" href="/" aria-label="Exphone Service Jayapura">
+              <span><img src="/assets/logo-exphone-exp.svg" alt=""></span>
+              <b>Exphone<small>Admin</small></b>
+            </a>
+            <div class="admin-sidebar-label">Menu Admin</div>
+            <nav class="admin-sidebar-nav" aria-label="Navigasi dashboard">
+              <a class="is-current" href="#adminOverview"><i>01</i><span>Ringkasan</span><b>01</b></a>
+              <a href="#adminScanner"><i>02</i><span>Pindai Member</span><b>02</b></a>
+              <a href="#adminMembers"><i>03</i><span>Daftar member</span><b>03</b></a>
+            </nav>
+          </aside>
+          <div class="admin-dashboard-main">
+        <div class="dashboard-heading" id="adminOverview">
           <div>
-            <span class="section-kicker">RBM MANAGEMENT CENTER</span>
+            <span class="section-kicker">Portal Admin Exphone</span>
             <h1>Dashboard <span>Admin</span></h1>
-            <p>Ringkasan dan pengelolaan data keanggotaan RBM.</p>
+            <p>Ringkasan dan pengelolaan data member Exphone Service Jayapura.</p>
           </div>
-          <button class="button button-outline logout-button" type="button" onclick="logoutAdmin()">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M10 17l5-5-5-5m5 5H3m10-9h5a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3h-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Keluar
+          <button class="button button-outline logout-button" type="button" onclick="logoutAdmin()" aria-label="Keluar dari Admin">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M10 17l5-5-5-5m5 5H3m10-9h5a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3h-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Keluar dari Admin</span>
           </button>
         </div>
 
         <div class="stats-grid">
           <article class="stat-card stat-total">
-            <div class="stat-top"><span>Total Member</span><span class="stat-icon">◎</span></div>
+            <div class="stat-top"><span>Total Member</span><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M16 20v-1.5a4.5 4.5 0 0 0-4.5-4.5h-3A4.5 4.5 0 0 0 4 18.5V20M10 10.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM16 4.5a3.5 3.5 0 0 1 0 6.7M17 14h3m-1.5-1.5v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
             <strong id="statTotal">0</strong>
             <small>Seluruh data member</small>
           </article>
           <article class="stat-card">
-            <div class="stat-top"><span>Member Aktif</span><span class="stat-icon stat-icon-green">✓</span></div>
+            <div class="stat-top"><span>Member Aktif</span><span class="stat-icon stat-icon-green" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 7 3v5.5c0 4.4-3 7.8-7 9.5-4-1.7-7-5.1-7-9.5V6l7-3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m8.5 12 2.2 2.2 4.8-4.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
             <strong id="statActive">0</strong>
             <small>Status keanggotaan aktif</small>
           </article>
           <article class="stat-card">
-            <div class="stat-top"><span>Member Nonaktif</span><span class="stat-icon stat-icon-muted">–</span></div>
+            <div class="stat-top"><span>Member Nonaktif</span><span class="stat-icon stat-icon-muted" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="10" cy="8" r="3.5" stroke="currentColor" stroke-width="1.7"/><path d="M3.8 20v-1.3a4.7 4.7 0 0 1 4.7-4.7h3a4.7 4.7 0 0 1 3.4 1.5M17 17l4 4m0-4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
             <strong id="statInactive">0</strong>
             <small>Status keanggotaan nonaktif</small>
           </article>
         </div>
 
-        <div class="admin-content-grid">
-          <section class="surface member-panel">
+          <aside id="adminScanner" class="surface scanner-card scanner-card-wide">
+            <div class="scanner-card-top">
+              <span class="scanner-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 8V5a1 1 0 0 1 1-1h3m8 0h3a1 1 0 0 1 1 1v3m0 8v3a1 1 0 0 1-1 1h-3m-8 0H5a1 1 0 0 1-1-1v-3M8 8h3v3H8zM14 8h2v2h-2zM8 14h2v2H8zM14 13h3v3h-3z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="section-kicker">Pemeriksaan Member</span>
+            </div>
+            <h2>Verifikasi QR</h2>
+            <p>Pindai QR Code kartu digital atau cari anggota melalui nama, nomor WhatsApp, maupun Member ID.</p>
+            <button id="scannerToggle" class="button button-primary scanner-open-button" type="button" onclick="toggleScanner()">Buka Scanner QR <span class="arrow-mark" aria-hidden="true"></span></button>
+            <button class="button button-light scanner-refresh-button" type="button" onclick="loadDashboard()">Perbarui Data Member</button>
+
+            <div id="scannerPanel" class="scanner-panel" hidden>
+              <div id="reader" class="qr-reader"></div>
+              <button class="button button-light stop-camera-button" type="button" onclick="stopScanner()">Hentikan Kamera</button>
+            </div>
+            <div class="member-validation-search">
+              <label for="manualToken">Cari nama, nomor WhatsApp, atau Member ID</label>
+              <input id="manualToken" type="search" autocomplete="off" placeholder="Ketik nama, 4 digit nomor, atau bagian ID">
+              <button class="button button-dark" type="button" onclick="checkManual()">Cari Member</button>
+              <div id="scanMsg" class="message" aria-live="polite"></div>
+              <div id="memberResult"></div>
+            </div>
+          </aside>
+
+                <div class="admin-content-grid">
+          <section id="adminMembers" class="surface member-panel">
             <div class="panel-heading-row">
               <div>
-                <span class="section-kicker">MEMBER DIRECTORY</span>
-                <h2>Daftar Member</h2>
+                <span class="section-kicker">Database Member</span>
+                <h2>Pusat Data Member</h2>
                 <p>Cari data, buka kartu, hubungi, atau ubah status member.</p>
               </div>
               <span class="panel-heading-icon" aria-hidden="true">⌕</span>
@@ -206,7 +554,7 @@
             <div class="toolbar">
               <label class="search-field" for="memberSearch">
                 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-                <input id="memberSearch" type="search" placeholder="Cari nama, nomor, atau ID member">
+                <input id="memberSearch" type="search" placeholder="Cari nama, nomor WhatsApp, atau Member ID">
               </label>
               <select id="memberFilter" aria-label="Filter status member">
                 <option value="all">Semua status</option>
@@ -222,36 +570,18 @@
             <div id="memberList" class="member-list"><div class="empty-state">Memuat data member...</div></div>
           </section>
 
-          <aside class="surface scanner-card">
-            <div class="scanner-card-top">
-              <span class="scanner-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M4 8V5a1 1 0 0 1 1-1h3m8 0h3a1 1 0 0 1 1 1v3m0 8v3a1 1 0 0 1-1 1h-3m-8 0H5a1 1 0 0 1-1-1v-3M8 8h3v3H8zM14 8h2v2h-2zM8 14h2v2H8zM14 13h3v3h-3z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-              <span class="section-kicker">MEMBER VALIDATION</span>
-            </div>
-            <h2>Verifikasi QR</h2>
-            <p>Scan QR pada kartu digital atau masukkan token secara manual untuk memeriksa data member.</p>
-            <button id="scannerToggle" class="button button-primary scanner-open-button" type="button" onclick="toggleScanner()">Buka Scanner QR <span aria-hidden="true">→</span></button>
-            <button class="button button-light scanner-refresh-button" type="button" onclick="loadDashboard()">Perbarui Data Member</button>
 
-            <div id="scannerPanel" class="scanner-panel" hidden>
-              <div id="reader" class="qr-reader"></div>
-              <button class="button button-light stop-camera-button" type="button" onclick="stopScanner()">Hentikan Kamera</button>
-              <label for="manualToken">Token QR manual</label>
-              <input id="manualToken" type="text" placeholder="Masukkan token dari QR Code">
-              <button class="button button-dark" type="button" onclick="checkManual()">Periksa Member</button>
-              <div id="scanMsg" class="message" aria-live="polite"></div>
-              <div id="memberResult"></div>
-            </div>
-          </aside>
+        </div>
+          </div>
         </div>
       </section>
     </section>
   </main>
 
   <footer class="site-footer">
-    <span>© RBM Digital Member</span>
+    <span>© Exphone Service Jayapura · EXP Digital Member</span>
     <span>Membership access made simple</span>
   </footer>
 </body>
 </html>
+

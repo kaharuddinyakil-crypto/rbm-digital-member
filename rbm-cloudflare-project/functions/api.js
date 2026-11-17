@@ -4,13 +4,15 @@ const ALLOWED_ACTIONS = new Set([
   'checkAdminPin',
   'getAdminDashboard',
   'setMemberStatus',
+  'deleteMember',
+  'findMembersByPhone',
   'verifyMember'
 ]);
 
 export async function onRequestPost({ request, env }) {
   if (!env.RBM_GAS_URL) {
     return Response.json(
-      { ok: false, message: 'Konfigurasi RBM_GAS_URL belum dipasang pada Cloudflare Pages.' },
+      { ok: false, message: 'Konfigurasi backend belum dipasang. Pastikan variable RBM_GAS_URL sudah diisi pada Cloudflare Pages.' },
       { status: 500, headers: { 'Cache-Control': 'no-store' } }
     );
   }
@@ -57,7 +59,7 @@ export async function onRequestPost({ request, env }) {
 
     if (!upstream.ok) {
       return Response.json(
-        { ok: false, message: result && result.message ? result.message : 'Layanan database RBM sedang tidak tersedia.' },
+        { ok: false, message: result && result.message ? result.message : 'Layanan database EXP sedang tidak tersedia.' },
         { status: 502, headers: { 'Cache-Control': 'no-store' } }
       );
     }
@@ -69,7 +71,10 @@ export async function onRequestPost({ request, env }) {
         result.data.cardUrl = toPublicCardUrl(result.data.cardUrl, publicOrigin);
       }
 
-      if (action === 'getAdminDashboard' && Array.isArray(result.data.members)) {
+      if (
+        (action === 'getAdminDashboard' || action === 'findMembersByPhone') &&
+        Array.isArray(result.data.members)
+      ) {
         result.data.members = result.data.members.map(function(member) {
           if (member && member.cardUrl) {
             member.cardUrl = toPublicCardUrl(member.cardUrl, publicOrigin);
@@ -95,7 +100,7 @@ export async function onRequestPost({ request, env }) {
 
 export async function onRequestGet() {
   return Response.json(
-    { ok: true, service: 'RBM Digital Member API', message: 'API aktif. Gunakan metode POST.' },
+    { ok: true, service: 'EXP Digital Member API', message: 'API aktif. Gunakan metode POST.' },
     { headers: { 'Cache-Control': 'no-store' } }
   );
 }

@@ -1,0 +1,74 @@
+{
+  "id": "/",
+  "name": "EXPHONE VIP MEMBER",
+  "short_name": "EXPHONE",
+  "description": "EXPHONE VIP MEMBER — kartu digital dan tambahan diskon 5% untuk penggantian sparepart iPhone di semua cabang Exphone Service Jayapura.",
+  "lang": "id-ID",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "portrait",
+  "background_color": "#100B78",
+  "theme_color": "#2814F5",
+  "categories": [
+    "business",
+    "productivity"
+  ],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/icons/icon-192-cobalt.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512-cobalt.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512-maskable-cobalt.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/exphone-electric.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Pendaftaran Member",
+      "short_name": "Daftar",
+      "url": "/?page=register",
+      "icons": [
+        {
+          "src": "/icons/icon-192-cobalt.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Login Member",
+      "short_name": "Login",
+      "url": "/?page=login",
+      "icons": [
+        {
+          "src": "/icons/icon-192-cobalt.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}

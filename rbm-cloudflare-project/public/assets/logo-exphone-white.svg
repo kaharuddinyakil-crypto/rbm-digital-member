@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2700" height="900" viewBox="0 0 900 300">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        font-size: 53px;
+        font-family: Poppins;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M0,40.71v36.5H165.642L211.965,148.8l-44.92,68.784H0v41.9l190.909,0.208L234.425,188.1l47.727,71.383H329.88L262.5,148.8l44.92-70.187H442.179a30.781,30.781,0,0,1,2.807,56.15H349.124V259.486h43.924V175.469h58.957a70.608,70.608,0,0,0,2.808-136.163H279.345L240.04,110.9,192.313,40.71H0Z"/>
+  <path class="cls-1" d="M166.212,129.217v36.49H0v-36.49H166.212Z"/>
+  <text id="EXPHONE_SERVICE_JAYAPURA" data-name="EXPHONE SERVICE JAYAPURA" class="cls-2" transform="matrix(1.146, 0, 0, 1.146, 541.437, 100.038)">EXPHONE<tspan x="0" dy="63.6">SERVICE</tspan><tspan x="0" dy="63.6">JAYAPURA</tspan></text>
+</svg>

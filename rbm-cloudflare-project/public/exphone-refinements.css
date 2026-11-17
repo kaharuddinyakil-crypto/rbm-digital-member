@@ -1,0 +1,136 @@
+
+/* EXPHONE refinement: clear language, accessible actions, safe logo and mobile card */
+:root { --x-lime: #c8f000; }
+.topbar { position: sticky !important; top: 0 !important; }
+.brand-symbol-wide {
+  width: 174px !important; height: 58px !important; flex: 0 0 174px !important;
+  padding: 0 !important; border: 0 !important; border-radius: 0 !important;
+  background: transparent !important; box-shadow: none !important; overflow: visible !important;
+}
+.brand-symbol-wide img { width: 100% !important; height: 100% !important; object-fit: contain !important; object-position: left center !important; }
+.home-hero h1 { max-width: 760px !important; font-size: clamp(48px,6.1vw,88px) !important; line-height: .98 !important; letter-spacing: -.065em !important; }
+.home-hero h1 span { color: var(--x-lime) !important; }
+.home-hero-actions { position: relative; z-index: 5; }
+.arrow-mark { display: inline-block; width: 17px; height: 17px; position: relative; flex: 0 0 17px; }
+.arrow-mark::before { content: ""; position: absolute; width: 10px; height: 10px; border-top: 2px solid currentColor; border-right: 2px solid currentColor; right: 2px; top: 2px; }
+.arrow-mark::after { content: ""; position: absolute; width: 14px; height: 2px; background: currentColor; transform: rotate(-45deg); transform-origin: right center; right: 3px; top: 4px; }
+.play-icon.arrow-mark { width: 34px; height: 34px; flex-basis: 34px; border-radius: 50%; background: #fff; color: #2416ed; display: inline-grid; place-items: center; }
+.play-icon.arrow-mark::before { width: 8px; height: 8px; right: 10px; top: 10px; }
+.play-icon.arrow-mark::after { width: 11px; right: 10px; top: 12px; }
+.ticker-track b.ticker-mark { width: 8px !important; height: 8px !important; display: inline-block !important; flex: 0 0 8px; background: var(--x-navy); transform: rotate(45deg); border-radius: 1px; font-size: 0 !important; }
+.visual-card-bottom i.arrow-mark { font-size: 0 !important; color: var(--x-lime) !important; }
+.home-section-heading h2 { letter-spacing: -.06em !important; }
+.home-options { scroll-margin-top: 90px; }
+.home-option-copy strong { line-height: 1.2 !important; }
+.home-option-copy small { max-width: 260px; line-height: 1.55 !important; }
+.page-heading h1 { letter-spacing: -.055em !important; }
+.card-stage { overflow: hidden !important; }
+.card-back { pointer-events: none; }
+.member-card { overflow: hidden !important; }
+.card-brand-mark { display: none !important; }
+.card-brand strong { font-size: 18px !important; letter-spacing: .08em !important; }
+.card-brand small { font-size: 7px !important; letter-spacing: .12em !important; }
+.admin-art-monogram { display: flex !important; align-items: center !important; justify-content: flex-start !important; width: min(230px,65%) !important; height: 72px !important; padding: 0 !important; border: 0 !important; border-radius: 0 !important; background: transparent !important; box-shadow: none !important; overflow: visible !important; }
+.admin-art-monogram img { width: 100% !important; height: 100% !important; object-fit: contain !important; object-position: left center !important; }
+
+/* On phones, keep the three most-used actions visible in the header. */
+@media (max-width: 760px) {
+  .topbar {
+    position: sticky !important; top: 0 !important; z-index: 100 !important;
+    min-height: auto !important; grid-template-columns: minmax(0,1fr) auto !important;
+    grid-template-rows: 58px 44px !important; gap: 0 8px !important;
+    padding: 0 12px !important;
+  }
+  .brand-symbol-wide { width: 142px !important; height: 46px !important; flex-basis: 142px !important; }
+  .brand-text { display: none !important; }
+  .topbar-side { grid-column: 2; grid-row: 1; }
+  .topbar-cta, .topbar-home-link {
+    min-height: 34px !important; padding: 0 12px !important;
+    font-size: 9px !important; letter-spacing: .04em !important;
+  }
+  .topbar-nav {
+    display: flex !important; grid-column: 1 / -1 !important; grid-row: 2 !important;
+    width: 100% !important; justify-content: space-between !important; align-items: center !important;
+    gap: 5px !important; padding: 0 1px 7px !important;
+    overflow: visible !important;
+  }
+  .topbar-nav a {
+    display: inline-flex !important; align-items: center !important; justify-content: center !important;
+    min-height: 30px !important; padding: 0 9px !important; border-radius: 999px !important;
+    border: 1px solid rgba(255,255,255,.2) !important; color: #fff !important;
+    font-size: 8px !important; font-weight: 800 !important; letter-spacing: .025em !important;
+    white-space: nowrap !important;
+  }
+  .topbar-nav a::after { display: none !important; }
+  .home-hero { padding: 35px 20px 54px !important; gap: 0 !important; }
+  .home-kicker { font-size: 9px !important; letter-spacing: .08em !important; }
+  .home-hero h1 { margin: 17px 0 14px !important; font-size: clamp(39px,9.6vw,60px) !important; line-height: 1 !important; }
+  .home-hero h1 span { display: block !important; font-size: .72em !important; line-height: 1.1 !important; }
+  .home-promo-description { font-size: 13px !important; line-height: 1.55 !important; }
+  .home-promo-support { display: block !important; margin-top: 8px !important; }
+  .home-hero-actions { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 8px !important; margin-top: 18px !important; }
+  .home-cta-primary, .home-cta-secondary { min-height: 46px !important; padding: 0 10px !important; gap: 7px !important; font-size: 9px !important; letter-spacing: .02em !important; }
+  .home-hero-proof { margin-top: 19px !important; }
+  .home-visual { min-height: 315px !important; margin-top: 5px !important; }
+  .home-hero-index { display: none !important; }
+  .home-options { grid-template-columns: 1fr !important; }
+  .home-option { min-height: 116px !important; display: grid !important; grid-template-columns: 42px 1fr 25px !important; align-items: center !important; gap: 12px !important; padding: 17px !important; }
+  .home-option-copy { display: flex !important; flex-direction: column !important; gap: 5px !important; }
+  .home-option-copy strong { font-size: 15px !important; }
+  .home-option-copy small { font-size: 11px !important; }
+  .home-option-arrow { position: static !important; }
+  .home-benefits, .home-actions-section { padding-top: 54px !important; }
+  #registerPage, #customerLoginPage, #adminPage { padding-top: 15px !important; }
+  .hero-copy, .customer-login-visual { padding: 25px 21px !important; }
+  .hero-copy h1, .customer-login-visual h1 { font-size: clamp(37px,9vw,54px) !important; }
+  .admin-login-art { min-height: 250px !important; padding: 24px !important; }
+  .admin-art-monogram { width: 190px !important; height: 55px !important; margin-bottom: 13px !important; }
+  .admin-art-title { font-size: clamp(29px,8vw,38px) !important; line-height: 1 !important; }
+  .admin-art-foot { left: 24px !important; bottom: 18px !important; }
+  #cardPage { padding: 24px 10px 35px !important; }
+  .page-heading { margin: 0 auto 19px !important; padding: 0 5px !important; }
+  .page-heading p { font-size: 12px !important; line-height: 1.5 !important; }
+  .card-stage { width: 100% !important; padding: 26px 9px 32px !important; border-radius: 19px !important; }
+  .member-card { width: 100% !important; aspect-ratio: 1.48 / 1 !important; padding: 15px !important; border-radius: 14px !important; }
+  .card-topline { gap: 8px !important; }
+  .card-brand { gap: 6px !important; min-width: 0 !important; }
+  .card-brand strong { font-size: 13px !important; letter-spacing: .05em !important; }
+  .card-brand small { font-size: 5px !important; letter-spacing: .08em !important; }
+  .card-type { font-size: 6px !important; padding: 5px 7px !important; white-space: nowrap !important; }
+  .card-middle { display: grid !important; grid-template-columns: minmax(0,1fr) auto !important; align-items: center !important; gap: 8px !important; margin-top: 14px !important; }
+  .card-details { min-width: 0 !important; }
+  .card-label { font-size: 6px !important; letter-spacing: .1em !important; }
+  .card-details h2 { font-size: clamp(12px,3.5vw,18px) !important; overflow-wrap: anywhere !important; margin: 5px 0 8px !important; }
+  .card-id { font-size: 6px !important; overflow-wrap: anywhere !important; }
+  .card-status { margin-top: 7px !important; font-size: 6px !important; }
+  .card-qr-wrap { width: clamp(74px,22vw,100px) !important; flex: 0 0 auto !important; }
+  .card-qr { padding: 4px !important; border-radius: 7px !important; }
+  .card-qr-wrap > span { font-size: 5px !important; letter-spacing: .08em !important; }
+  .card-bottomline { margin-top: 12px !important; font-size: 5px !important; letter-spacing: .08em !important; }
+  .card-actions { gap: 9px !important; }
+  .card-actions .button { min-height: 52px !important; font-size: 10px !important; line-height: 1.3 !important; padding: 10px 14px !important; }
+}
+@media (max-width: 360px) {
+  .topbar-nav a { padding: 0 6px !important; font-size: 7px !important; }
+  .brand-symbol-wide { width: 126px !important; flex-basis: 126px !important; }
+  .card-type { font-size: 5px !important; }
+  .card-brand strong { font-size: 11px !important; }
+}
+
+.brand-symbol-wide { width: 66px !important; height: 48px !important; flex-basis: 66px !important; }
+.brand-text { display: flex !important; flex-direction: column !important; gap: 2px !important; }
+.brand-text strong { font-size: 18px !important; letter-spacing: .09em !important; }
+.brand-text small { font-size: 9px !important; letter-spacing: .12em !important; }
+.card-brand-mark { display: grid !important; width: 54px !important; height: 42px !important; flex: 0 0 54px !important; padding: 4px !important; border: 1px solid rgba(201,255,0,.55) !important; border-radius: 9px !important; background: rgba(255,255,255,.06) !important; }
+.card-brand-mark img { width: 100% !important; height: 100% !important; object-fit: contain !important; }
+@media (max-width: 760px) {
+  .brand-symbol-wide { width: 55px !important; height: 40px !important; flex-basis: 55px !important; }
+  .brand-text { display: flex !important; }
+  .brand-text strong { font-size: 15px !important; }
+  .brand-text small { font-size: 7px !important; }
+  .card-brand-mark { width: 40px !important; height: 32px !important; flex-basis: 40px !important; }
+}
+
+.admin-sidebar-nav a i { font-style: normal !important; font-size: 9px !important; font-weight: 900 !important; letter-spacing: .03em; }
+.benefit-symbol { display: inline-grid !important; place-items: center !important; width: 32px !important; height: 32px !important; border-radius: 50% !important; border: 1px solid currentColor !important; font-size: 9px !important; font-weight: 900 !important; }
+.home-option-arrow.arrow-mark { color: currentColor; }

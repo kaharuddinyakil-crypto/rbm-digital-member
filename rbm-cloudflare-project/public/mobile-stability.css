@@ -1,0 +1,514 @@
+/* ============================================================
+   EXPHONE MOBILE STABILITY LAYER
+   Final layout rules. This file loads after all previous stylesheets.
+   ============================================================ */
+
+/* The uploaded EXP SVG is always rendered at its natural proportions. */
+.topbar .brand-symbol-wide,
+.topbar .brand-symbol-wide img,
+.card-brand-mark img,
+.visual-screen-logo,
+.visual-card-top img,
+.admin-art-monogram img {
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  transform: none !important;
+  filter: none !important;
+}
+.topbar .brand-symbol-wide {
+  aspect-ratio: 1080 / 500 !important;
+  overflow: visible !important;
+}
+.topbar .brand-symbol-wide img,
+.card-brand-mark img {
+  display: block !important;
+  width: 100% !important;
+}
+.visual-screen-logo { display: block !important; width: 48% !important; }
+.visual-card-top img { display: block !important; width: 48px !important; flex: 0 0 48px !important; }
+.admin-art-monogram img { display: block !important; width: 84px !important; flex: 0 0 84px !important; }
+
+/* Do not repeat the header's Daftar / Masuk / Admin actions in the hero. */
+.home-hero-actions { display: none !important; }
+
+body[data-page="home"] .site-main { margin-top: 0 !important; padding-top: 0 !important; }
+
+/* Keep all access buttons together at the top on every home-page device. */
+.topbar-nav { flex-wrap: nowrap !important; }
+.topbar-nav a { white-space: nowrap !important; }
+
+/* Homepage copy and process section. */
+.home-promo-description { max-width: 680px !important; }
+.home-promo-support { max-width: 620px !important; }
+.home-process-section {
+  width: min(calc(100% - 44px), 1160px) !important;
+  margin: 0 auto !important;
+  padding: 72px 0 0 !important;
+}
+.home-process-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+}
+.home-process-card {
+  display: grid !important;
+  grid-template-columns: 42px minmax(0, 1fr) !important;
+  align-items: start !important;
+  gap: 14px !important;
+  min-width: 0 !important;
+  min-height: 150px !important;
+  padding: 22px !important;
+  border: 1px solid #e4e7f1 !important;
+  border-radius: 18px !important;
+  background: #fff !important;
+  box-shadow: 0 12px 32px rgba(20, 28, 70, .055) !important;
+}
+.home-process-number {
+  display: grid !important;
+  place-items: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  border: 1px solid rgba(40, 20, 245, .18) !important;
+  border-radius: 12px !important;
+  color: #2814f5 !important;
+  background: #f0efff !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+}
+.home-process-card h3 {
+  margin: 2px 0 7px !important;
+  color: #111329 !important;
+  font-size: 15px !important;
+  font-weight: 850 !important;
+  line-height: 1.3 !important;
+}
+.home-process-card p {
+  margin: 0 !important;
+  color: #62677d !important;
+  font-size: 12px !important;
+  line-height: 1.65 !important;
+}
+.home-section-heading > p { color: #62677d !important; }
+.benefit-card p { max-width: 34ch; line-height: 1.7 !important; }
+
+/* Digital card: separate content rows so QR text cannot collide with the footer. */
+#cardPage .card-stage {
+  width: min(100%, 900px) !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+#cardPage .member-card {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  grid-template-rows: auto minmax(0, 1fr) auto !important;
+  align-items: stretch !important;
+  aspect-ratio: 1.586 / 1 !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+#cardPage .card-topline,
+#cardPage .card-middle,
+#cardPage .card-bottomline { min-width: 0 !important; }
+#cardPage .card-middle { align-items: center !important; }
+#cardPage .card-qr-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  flex-shrink: 0 !important;
+}
+#cardPage .card-qr {
+  display: grid !important;
+  place-items: center !important;
+  width: 100% !important;
+  aspect-ratio: 1 / 1 !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  background: #fff !important;
+}
+#cardPage .card-qr canvas,
+#cardPage .card-qr img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: contain !important;
+}
+#cardPage .card-qr-wrap > span {
+  display: block !important;
+  margin-top: 6px !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+}
+#cardPage .card-bottomline {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  min-height: 22px !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 1050px) {
+  .home-process-section { width: min(calc(100% - 36px), 900px) !important; }
+  .home-process-grid { grid-template-columns: 1fr !important; gap: 10px !important; }
+  .home-process-card { min-height: 0 !important; padding: 18px !important; }
+}
+
+@media (min-width: 761px) and (max-width: 1050px) {
+  #homePage .home-quick-panel {
+    grid-template-columns: minmax(0, 1fr) !important;
+    max-width: none !important;
+    gap: 10px !important;
+  }
+  #homePage .home-quick-heading p { margin-bottom: 8px !important; }
+  #homePage .home-register-form {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: end !important;
+    gap: 10px !important;
+  }
+  #homePage .home-register-form .button {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    min-height: 46px !important;
+    white-space: nowrap !important;
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  /* Compact two-row header: brand first, all three routes immediately below. */
+  .topbar {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    grid-template-rows: 52px 40px !important;
+    align-items: center !important;
+    gap: 0 8px !important;
+    min-height: 96px !important;
+    padding: 2px 14px 4px !important;
+  }
+  .topbar .brand { grid-column: 1 !important; grid-row: 1 !important; gap: 9px !important; }
+  .topbar .brand-symbol-wide { width: 56px !important; flex: 0 0 56px !important; }
+  .topbar .brand-text { display: flex !important; flex-direction: column !important; gap: 2px !important; }
+  .topbar .brand-text strong { font-size: 13px !important; line-height: 1.05 !important; letter-spacing: .1em !important; }
+  .topbar .brand-text small { font-size: 6.5px !important; line-height: 1.25 !important; letter-spacing: .12em !important; }
+  .topbar-nav {
+    display: flex !important;
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+    width: 100% !important;
+    justify-content: stretch !important;
+    gap: 7px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .topbar-nav a {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    min-height: 33px !important;
+    padding: 0 7px !important;
+    font-size: 10px !important;
+    letter-spacing: 0 !important;
+  }
+  .topbar-side { display: none !important; }
+  body:not([data-page="home"]) .topbar-nav { display: none !important; }
+  body:not([data-page="home"]) .topbar-side { display: flex !important; grid-column: 2 !important; grid-row: 1 !important; }
+  .topbar-home-link { min-height: 34px !important; padding: 0 11px !important; font-size: 10px !important; }
+
+  /* Stack text, illustration, and form as three separate blocks. */
+  body[data-page="home"] .site-main { width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+  #homePage, #homePage .home-layout { width: 100% !important; max-width: none !important; overflow-x: clip !important; }
+  #homePage .home-layout { padding: 0 0 30px !important; }
+  #homePage .home-hero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 14px !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 24px 17px 20px !important;
+    overflow: hidden !important;
+    border-radius: 0 0 22px 22px !important;
+  }
+  #homePage .home-hero-main {
+    display: contents !important;
+  }
+  #homePage .home-hero-copy { order: 1 !important; }
+  #homePage .home-quick-panel { order: 2 !important; }
+  #homePage .home-visual { order: 3 !important; }
+  #homePage .home-hero-copy {
+    position: relative !important;
+    z-index: 4 !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  #homePage .home-kicker { gap: 7px !important; font-size: 8px !important; letter-spacing: .1em !important; }
+  #homePage .home-hero h1 {
+    max-width: 100% !important;
+    margin: 15px 0 12px !important;
+    font-size: clamp(36px, 10.3vw, 47px) !important;
+    line-height: .94 !important;
+    letter-spacing: -.07em !important;
+    overflow-wrap: normal !important;
+  }
+  #homePage .home-hero h1 span {
+    display: block !important;
+    max-width: 100% !important;
+    font-size: .84em !important;
+    line-height: 1 !important;
+    white-space: normal !important;
+  }
+  #homePage .home-promo-description {
+    max-width: 100% !important;
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 1.58 !important;
+  }
+  #homePage .home-discount-highlight { padding: 2px 6px 3px !important; font-size: .94em !important; }
+  #homePage .home-promo-support { display: none !important; }
+  #homePage .home-hero-actions { display: none !important; }
+  #homePage .home-hero-proof { display: none !important; }
+  #homePage .home-hero-main .home-visual {
+    position: relative !important;
+    z-index: 1 !important;
+    display: block !important;
+    justify-self: center !important;
+    width: min(100%, 430px) !important;
+    max-width: 430px !important;
+    height: clamp(238px, 66vw, 278px) !important;
+    min-height: 0 !important;
+    margin: 0 auto !important;
+    overflow: visible !important;
+    animation: exp-visual-enter .75s ease both !important;
+  }
+  #homePage .visual-grid { inset: 4% 0 !important; height: 92% !important; }
+  #homePage .visual-orbit { width: min(74%, 250px) !important; }
+  #homePage .visual-orbit-two { width: min(90%, 310px) !important; }
+  #homePage .visual-phone {
+    top: 10px !important;
+    left: 17% !important;
+    width: clamp(112px, 32vw, 140px) !important;
+    height: auto !important;
+    aspect-ratio: 220 / 395 !important;
+    padding: 6px !important;
+    border-width: 4px !important;
+    border-radius: 25px !important;
+    animation: exp-phone-float 7s ease-in-out infinite !important;
+    will-change: transform !important;
+  }
+  #homePage .visual-phone::before { top: 5px !important; width: 40px !important; height: 9px !important; }
+  #homePage .visual-phone-camera { top: 3px !important; right: 18px !important; width: 4px !important; height: 4px !important; }
+  #homePage .visual-phone-screen { border-radius: 18px !important; }
+  #homePage .visual-screen-kicker { top: 18% !important; font-size: 5px !important; }
+  #homePage .visual-screen-logo { width: 48% !important; max-width: 60px !important; }
+  #homePage .visual-screen-line { width: 40px !important; height: 3px !important; margin: 8px 0 10px !important; }
+  #homePage .visual-screen-caption { font-size: 7px !important; }
+  #homePage .visual-screen-dot { bottom: 13px !important; width: 4px !important; height: 4px !important; }
+  #homePage .visual-member-card {
+    right: 3% !important;
+    bottom: 18px !important;
+    width: min(74%, 270px) !important;
+    height: auto !important;
+    aspect-ratio: 1.58 / 1 !important;
+    padding: 12px 13px !important;
+    border-radius: 14px !important;
+    animation: exp-member-card-float 6.4s ease-in-out infinite !important;
+    will-change: transform !important;
+  }
+  #homePage .visual-card-top img { width: 34px !important; flex-basis: 34px !important; }
+  #homePage .visual-card-top small { padding: 3px 5px !important; font-size: 5px !important; }
+  #homePage .visual-card-mid small { font-size: 5px !important; letter-spacing: .12em !important; }
+  #homePage .visual-card-mid strong { font-size: clamp(39px, 11vw, 52px) !important; }
+  #homePage .visual-card-bottom span { font-size: 5px !important; letter-spacing: .08em !important; }
+  #homePage .visual-card-bottom i { font-size: 14px !important; }
+  #homePage .visual-sticker {
+    top: 2% !important;
+    right: 2% !important;
+    width: clamp(54px, 15vw, 68px) !important;
+    height: clamp(54px, 15vw, 68px) !important;
+    animation: exp-vip-float 5.2s ease-in-out infinite !important;
+  }
+  #homePage .visual-sticker span { font-size: 16px !important; }
+  #homePage .visual-sticker strong { margin-top: 3px !important; font-size: 5px !important; }
+  #homePage .visual-sticker i { right: -4px !important; bottom: -8px !important; font-size: 18px !important; }
+  #homePage .visual-plus { font-size: 25px !important; }
+  #homePage .visual-caption { right: 2% !important; bottom: 2px !important; font-size: 5px !important; }
+  #homePage .home-hero-index { display: none !important; }
+
+  #homePage .home-quick-panel {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 3px 0 0 !important;
+    padding: 18px !important;
+    gap: 12px !important;
+    border-radius: 17px !important;
+  }
+  #homePage .home-quick-heading .section-kicker { font-size: 9px !important; }
+  #homePage .home-quick-heading h2 { margin: 6px 0 4px !important; font-size: 21px !important; line-height: 1.2 !important; }
+  #homePage .home-quick-heading p { margin: 0 !important; font-size: 12px !important; line-height: 1.5 !important; }
+  #homePage .home-register-form {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 9px !important;
+  }
+  #homePage .home-form-field { min-width: 0 !important; }
+  #homePage .home-register-form label { display: block !important; margin: 0 0 6px !important; font-size: 11px !important; line-height: 1.35 !important; }
+  #homePage .home-register-form input { width: 100% !important; min-width: 0 !important; min-height: 47px !important; padding: 0 12px !important; border-radius: 10px !important; font-size: 13px !important; }
+  #homePage .home-register-form .button { grid-column: 1 !important; width: 100% !important; min-height: 48px !important; margin-top: 3px !important; border-radius: 11px !important; font-size: 11px !important; }
+  #homePage .home-quick-footnote { margin: 2px 0 0 !important; padding-top: 10px !important; border-top: 1px solid #e8e9f3 !important; font-size: 10px !important; line-height: 1.55 !important; }
+  #homePage .home-register-message { font-size: 11px !important; }
+
+  #homePage .home-ticker { min-height: 42px !important; margin: 0 !important; transform: none !important; overflow: hidden !important; }
+  #homePage .home-ticker .ticker-track { min-height: 42px !important; gap: 17px !important; font-size: 9px !important; }
+  #homePage .home-benefits,
+  #homePage .home-process-section { width: calc(100% - 32px) !important; margin: 0 auto !important; padding-top: 46px !important; }
+  #homePage .home-section-heading { display: grid !important; grid-template-columns: minmax(0, 1fr) !important; gap: 10px !important; margin-bottom: 19px !important; }
+  #homePage .home-section-heading h2 { margin: 10px 0 0 !important; font-size: clamp(32px, 8.5vw, 42px) !important; line-height: 1.04 !important; }
+  #homePage .home-section-heading > p { max-width: 100% !important; margin: 0 !important; font-size: 12px !important; line-height: 1.65 !important; }
+  #homePage .benefit-grid { display: grid !important; grid-template-columns: minmax(0, 1fr) !important; gap: 11px !important; }
+  #homePage .benefit-card { min-height: 0 !important; padding: 21px !important; border-radius: 18px !important; }
+  #homePage .benefit-number { font-size: 76px !important; }
+  #homePage .benefit-card h3 { margin-top: 13px !important; font-size: 17px !important; }
+  #homePage .benefit-card p { max-width: 38ch !important; font-size: 12px !important; line-height: 1.65 !important; }
+  #homePage .benefit-icon-card { margin-top: 17px !important; }
+  #homePage .benefit-steps { margin-top: 26px !important; }
+  #homePage .home-process-section { padding-top: 48px !important; }
+  #homePage .home-process-grid { grid-template-columns: minmax(0, 1fr) !important; gap: 10px !important; }
+  #homePage .home-process-card { grid-template-columns: 38px minmax(0, 1fr) !important; gap: 12px !important; min-height: 0 !important; padding: 16px !important; border-radius: 15px !important; }
+  #homePage .home-process-number { width: 36px !important; height: 36px !important; border-radius: 10px !important; }
+  #homePage .home-process-card h3 { margin: 1px 0 5px !important; font-size: 14px !important; }
+  #homePage .home-process-card p { font-size: 11px !important; line-height: 1.6 !important; }
+  #homePage .home-footnote { width: calc(100% - 32px) !important; margin: 28px auto 0 !important; font-size: 10px !important; line-height: 1.6 !important; }
+
+  /* Digital card on phones: taller ratio, fixed QR column, separated footer. */
+  #cardPage { width: 100% !important; padding: 28px 14px 38px !important; }
+  #cardPage .page-heading { width: 100% !important; margin: 0 auto 18px !important; }
+  #cardPage .page-heading .section-kicker { font-size: 9px !important; }
+  #cardPage .page-heading h1 { margin: 9px 0 7px !important; font-size: clamp(30px, 8vw, 39px) !important; line-height: 1.05 !important; }
+  #cardPage .page-heading p { max-width: 34ch !important; margin: 0 auto !important; font-size: 12px !important; line-height: 1.55 !important; }
+  #cardPage .card-stage { width: 100% !important; margin: 0 auto 18px !important; padding: 0 !important; }
+  #cardPage .member-card {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: auto minmax(0, 1fr) auto !important;
+    width: 100% !important;
+    aspect-ratio: 1.45 / 1 !important;
+    min-height: 226px !important;
+    padding: 14px !important;
+    border-radius: 16px !important;
+    gap: 0 !important;
+  }
+  #cardPage .card-topline { align-items: center !important; gap: 7px !important; }
+  #cardPage .card-brand { gap: 8px !important; flex: 1 1 auto !important; min-width: 0 !important; }
+  #cardPage .card-brand-mark { width: 42px !important; height: auto !important; min-height: 27px !important; flex: 0 0 42px !important; padding: 4px !important; }
+  #cardPage .card-brand-mark img { width: 100% !important; height: auto !important; aspect-ratio: 1080 / 500 !important; }
+  #cardPage .card-brand > span:last-child { min-width: 0 !important; }
+  #cardPage .card-brand strong { display: block !important; font-size: clamp(12px, 3.4vw, 15px) !important; line-height: 1.2 !important; letter-spacing: 0 !important; white-space: nowrap !important; }
+  #cardPage .card-brand small { margin-top: 2px !important; font-size: 8px !important; line-height: 1.2 !important; letter-spacing: .02em !important; }
+  #cardPage .card-type { flex: 0 0 auto !important; padding: 5px 7px !important; font-size: 7px !important; letter-spacing: 0 !important; }
+  #cardPage .card-middle {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) clamp(76px, 23vw, 90px) !important;
+    align-items: center !important;
+    gap: 9px !important;
+    min-height: 0 !important;
+    margin: 10px 0 9px !important;
+  }
+  #cardPage .card-details { min-width: 0 !important; }
+  #cardPage .card-label { font-size: 8px !important; line-height: 1.2 !important; letter-spacing: .02em !important; }
+  #cardPage .card-details h2 { max-width: 100% !important; margin: 5px 0 8px !important; font-size: clamp(12px, 3.7vw, 15px) !important; line-height: 1.16 !important; letter-spacing: -.025em !important; overflow-wrap: anywhere !important; }
+  #cardPage .card-id-label { margin-top: 0 !important; font-size: 7.5px !important; }
+  #cardPage .card-id { margin: 3px 0 7px !important; font-size: 7.5px !important; line-height: 1.25 !important; letter-spacing: .02em !important; overflow-wrap: anywhere !important; }
+  #cardPage .card-status { margin-top: 1px !important; padding: 4px 7px !important; font-size: 8px !important; line-height: 1.2 !important; }
+  #cardPage .card-qr-wrap { width: 100% !important; max-width: 90px !important; min-width: 0 !important; align-self: center !important; }
+  #cardPage .card-qr { width: 100% !important; padding: 4px !important; border-radius: 7px !important; }
+  #cardPage .card-qr-wrap > span { margin-top: 5px !important; font-size: 7px !important; line-height: 1.15 !important; }
+  #cardPage .card-bottomline { min-height: 21px !important; padding-top: 7px !important; gap: 8px !important; font-size: 7px !important; line-height: 1.2 !important; letter-spacing: 0 !important; }
+  #cardPage .card-bottom-mark { flex: 0 0 auto !important; font-size: 8px !important; letter-spacing: .04em !important; }
+  #cardPage .card-actions { grid-template-columns: minmax(0, 1fr) !important; gap: 8px !important; margin-bottom: 9px !important; }
+  #cardPage .card-actions .button-primary { grid-column: 1 !important; }
+  #cardPage .card-actions .button,
+  #cardPage .card-qr-popup-button { min-height: 47px !important; font-size: 10px !important; line-height: 1.3 !important; }
+  #cardPage .page-bottom-link { margin-top: 20px !important; }
+  #cardPage .page-bottom-link a { font-size: 11px !important; }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding-left: 10px !important; padding-right: 10px !important; }
+  .topbar .brand { gap: 7px !important; }
+  .topbar .brand-symbol-wide { width: 49px !important; flex-basis: 49px !important; }
+  .topbar .brand-text strong { font-size: 11px !important; letter-spacing: .09em !important; }
+  .topbar .brand-text small { font-size: 5.8px !important; letter-spacing: .1em !important; }
+  .topbar-nav { gap: 5px !important; }
+  .topbar-nav a { min-height: 32px !important; padding: 0 5px !important; font-size: 9px !important; }
+  #homePage .home-hero { padding-left: 14px !important; padding-right: 14px !important; }
+  #homePage .home-hero h1 { font-size: clamp(34px, 9.6vw, 40px) !important; }
+  #homePage .home-hero h1 span { font-size: .83em !important; }
+  #homePage .home-visual { height: 236px !important; }
+  #homePage .visual-phone { left: 15% !important; width: 112px !important; }
+  #homePage .visual-member-card { right: 2% !important; bottom: 16px !important; width: min(75%, 244px) !important; padding: 10px 11px !important; }
+  #homePage .visual-card-mid strong { font-size: 39px !important; }
+  #homePage .visual-sticker { width: 54px !important; height: 54px !important; }
+  #homePage .home-quick-panel { padding: 15px !important; }
+  #cardPage .member-card { min-height: 230px !important; padding: 12px !important; }
+  #cardPage .card-type { display: none !important; }
+  #cardPage .card-middle { grid-template-columns: minmax(0, 1fr) 78px !important; gap: 7px !important; }
+  #cardPage .card-qr-wrap { max-width: 78px !important; }
+  #cardPage .card-qr-wrap > span { font-size: 6.5px !important; }
+  #cardPage .card-bottomline { font-size: 6.5px !important; }
+}
+
+@media (max-width: 340px) {
+  #homePage .home-quick-panel { padding: 12px !important; gap: 8px !important; }
+  #homePage .home-quick-heading p { display: none !important; }
+  #homePage .home-register-form { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 7px !important; }
+  #homePage .home-register-form label { font-size: 10px !important; }
+  #homePage .home-register-form input { min-height: 43px !important; padding: 0 8px !important; font-size: 11px !important; }
+  #homePage .home-register-form .button { grid-column: 1 / -1 !important; min-height: 44px !important; font-size: 10px !important; }
+  #homePage .home-quick-footnote { font-size: 9px !important; }
+  .topbar .brand-symbol-wide { width: 44px !important; flex-basis: 44px !important; }
+  .topbar .brand-text strong { font-size: 10px !important; }
+  .topbar .brand-text small { font-size: 5.2px !important; }
+  .topbar-nav a { min-height: 30px !important; font-size: 8px !important; }
+  #homePage .home-hero h1 { font-size: 32px !important; }
+  #homePage .home-hero h1 span { font-size: .82em !important; }
+  #homePage .home-visual { height: 220px !important; }
+  #homePage .visual-phone { width: 102px !important; }
+  #homePage .visual-member-card { width: 75% !important; }
+  #cardPage .member-card { min-height: 226px !important; }
+  #cardPage .card-brand strong { font-size: 11px !important; }
+  #cardPage .card-qr-wrap { max-width: 72px !important; }
+  #cardPage .card-middle { grid-template-columns: minmax(0, 1fr) 72px !important; }
+}
+
+@media (min-width: 761px) {
+  /* Desktop keeps the premium two-column hero and the same three top actions. */
+  #homePage .home-hero-actions { display: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #homePage .visual-phone,
+  #homePage .visual-member-card,
+  #homePage .visual-sticker,
+  #homePage .home-visual,
+  #homePage .home-hero-copy {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+[hidden] { display: none !important; }

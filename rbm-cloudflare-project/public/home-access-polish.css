@@ -1,0 +1,298 @@
+/* ============================================================
+   EXPHONE HOME ACCESS AND RESPONSIVE POLISH
+   Keeps the existing visual identity while improving access,
+   readability, and layout consistency across screen sizes.
+   ============================================================ */
+
+/* A clean brand-only header. Secondary navigation lives on the home page. */
+.topbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  min-height: 74px !important;
+  height: auto !important;
+  padding: 10px clamp(16px, 4.5vw, 64px) !important;
+  gap: 14px !important;
+}
+.topbar-nav { display: none !important; }
+.topbar .brand { margin: 0 !important; }
+body[data-page="home"] .topbar-side { display: none !important; }
+body:not([data-page="home"]) .topbar-side {
+  display: flex !important;
+  align-items: center !important;
+  margin-left: auto !important;
+}
+
+/* Three clear entry points, stacked like the supplied reference. */
+#memberActions.home-actions-section {
+  width: min(calc(100% - 48px), 900px) !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  padding: 28px 0 18px !important;
+}
+#memberActions .home-options {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+#memberActions .home-option {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: 42px minmax(0, 1fr) 24px !important;
+  align-items: center !important;
+  justify-content: initial !important;
+  min-width: 0 !important;
+  min-height: 76px !important;
+  padding: 13px 18px !important;
+  gap: 14px !important;
+  overflow: hidden !important;
+  border: 1px solid #e6e7f1 !important;
+  border-radius: 17px !important;
+  text-align: left !important;
+  text-decoration: none !important;
+  box-shadow: 0 10px 28px rgba(25, 24, 90, .055) !important;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease !important;
+}
+#memberActions .home-option::after { display: none !important; }
+#memberActions .home-option:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 15px 34px rgba(25, 24, 90, .12) !important;
+}
+#memberActions .home-option:focus-visible {
+  outline: 3px solid #c8f000 !important;
+  outline-offset: 3px !important;
+}
+#memberActions .home-option-number {
+  position: relative !important;
+  display: grid !important;
+  place-items: center !important;
+  width: 38px !important;
+  height: 38px !important;
+  flex: none !important;
+  border: 1px solid transparent !important;
+  border-radius: 12px !important;
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0 !important;
+  line-height: 1 !important;
+}
+#memberActions .home-option-copy {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+  gap: 5px !important;
+}
+#memberActions .home-option-copy strong {
+  display: block !important;
+  margin: 0 !important;
+  font-size: 13px !important;
+  font-weight: 900 !important;
+  line-height: 1.25 !important;
+  letter-spacing: .015em !important;
+}
+#memberActions .home-option-copy small {
+  display: block !important;
+  max-width: none !important;
+  margin: 0 !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0 !important;
+  overflow-wrap: anywhere !important;
+}
+#memberActions .home-option-arrow {
+  position: static !important;
+  display: block !important;
+  width: 22px !important;
+  height: 22px !important;
+  flex: 0 0 22px !important;
+  justify-self: end !important;
+  color: currentColor !important;
+}
+#memberActions .home-option-primary {
+  color: #fff !important;
+  border-color: #7540dc !important;
+  background: linear-gradient(108deg, #632bc8 0%, #8246e2 100%) !important;
+}
+#memberActions .home-option-primary .home-option-number {
+  color: #fff !important;
+  border-color: rgba(255,255,255,.24) !important;
+  background: rgba(255,255,255,.12) !important;
+}
+#memberActions .home-option-primary .home-option-copy strong { color: #fff !important; }
+#memberActions .home-option-primary .home-option-copy small { color: rgba(255,255,255,.9) !important; }
+#memberActions .home-option-primary .home-option-arrow { color: #fff !important; }
+#memberActions .home-option-member {
+  color: #27263b !important;
+  border-color: #e7e7f0 !important;
+  background: #fff !important;
+}
+#memberActions .home-option-member .home-option-number {
+  color: #7043d7 !important;
+  border-color: #e7dcff !important;
+  background: #f4efff !important;
+}
+#memberActions .home-option-member .home-option-copy strong { color: #29283e !important; }
+#memberActions .home-option-member .home-option-copy small { color: #697086 !important; }
+#memberActions .home-option-member .home-option-arrow { color: #7043d7 !important; }
+#memberActions .home-option-admin {
+  color: #fff !important;
+  border-color: #251b45 !important;
+  background: linear-gradient(108deg, #211936 0%, #35225f 100%) !important;
+}
+#memberActions .home-option-admin .home-option-number {
+  color: #f5d88d !important;
+  border-color: rgba(245,216,141,.34) !important;
+  background: rgba(255,255,255,.06) !important;
+}
+#memberActions .home-option-admin .home-option-copy strong { color: #fff !important; }
+#memberActions .home-option-admin .home-option-copy small { color: rgba(255,255,255,.86) !important; }
+#memberActions .home-option-admin .home-option-arrow { color: #f5d88d !important; }
+
+/* Improve readability on top of the existing blue and violet surfaces. */
+#homePage .home-kicker { color: #efffae !important; }
+#homePage .home-kicker b { color: rgba(255,255,255,.88) !important; }
+#homePage .home-promo-description { color: #fff !important; }
+#homePage .home-promo-support { color: #e6eaff !important; }
+#homePage .home-hero-proof strong { color: #fff !important; }
+#homePage .home-hero-proof small { color: #e1e5ff !important; }
+#homePage .visual-caption { color: rgba(255,255,255,.78) !important; }
+#homePage .home-section-heading > p { color: #555b70 !important; }
+#homePage .home-quick-heading p { color: #555b70 !important; }
+#homePage .home-quick-footnote { color: #555b70 !important; }
+#homePage .home-quick-footnote a { color: #3026ce !important; }
+
+/* Registration and member-login hero labels remain legible on gradients. */
+.hero-copy .eyebrow {
+  color: #f2ffd0 !important;
+  border-color: rgba(255,255,255,.34) !important;
+  background: rgba(8, 10, 58, .32) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.1) !important;
+}
+.hero-copy .eyebrow-dot {
+  background: #d7ff45 !important;
+  box-shadow: 0 0 0 4px rgba(215,255,69,.14) !important;
+}
+.hero-copy .hero-description,
+.customer-login-visual > p { color: #f0f2ff !important; }
+.hero-copy .hero-signature { color: #e0e5ff !important; }
+.register-perk-highlight small { color: rgba(255,255,255,.82) !important; }
+
+/* Stable sizing and wrapping on narrow screens. */
+@media (max-width: 760px) {
+  .topbar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    min-height: 66px !important;
+    padding: 8px 14px !important;
+    gap: 10px !important;
+  }
+  .topbar .brand { gap: 9px !important; }
+  .topbar .brand-symbol-wide {
+    width: 56px !important;
+    height: auto !important;
+    flex: 0 0 56px !important;
+    aspect-ratio: 1080 / 500 !important;
+  }
+  .topbar .brand-text { display: flex !important; gap: 2px !important; }
+  .topbar .brand-text strong { font-size: 13px !important; letter-spacing: .1em !important; }
+  .topbar .brand-text small { font-size: 6.5px !important; letter-spacing: .12em !important; }
+  body:not([data-page="home"]) .topbar-side { display: flex !important; margin-left: auto !important; }
+  .topbar-home-link { min-height: 35px !important; padding: 0 11px !important; font-size: 10px !important; }
+
+  #memberActions.home-actions-section {
+    width: calc(100% - 30px) !important;
+    padding: 21px 0 13px !important;
+  }
+  #memberActions .home-options { gap: 10px !important; }
+  #memberActions .home-option {
+    grid-template-columns: 38px minmax(0, 1fr) 21px !important;
+    min-height: 72px !important;
+    padding: 11px 13px !important;
+    gap: 10px !important;
+    border-radius: 15px !important;
+  }
+  #memberActions .home-option-number {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 11px !important;
+    font-size: 11px !important;
+  }
+  #memberActions .home-option-copy { gap: 4px !important; }
+  #memberActions .home-option-copy strong { font-size: 11.5px !important; }
+  #memberActions .home-option-copy small { font-size: 10px !important; line-height: 1.45 !important; }
+  #memberActions .home-option-arrow { width: 20px !important; height: 20px !important; flex-basis: 20px !important; }
+}
+
+@media (max-width: 390px) {
+  .topbar { padding-left: 11px !important; padding-right: 11px !important; }
+  .topbar .brand { gap: 7px !important; }
+  .topbar .brand-symbol-wide { width: 51px !important; flex-basis: 51px !important; }
+  .topbar .brand-text strong { font-size: 12px !important; }
+  .topbar .brand-text small { font-size: 6px !important; }
+  #memberActions .home-option { padding: 10px 11px !important; gap: 8px !important; }
+  #memberActions .home-option-copy strong { font-size: 10.5px !important; }
+  #memberActions .home-option-copy small { font-size: 9.5px !important; }
+  #homePage .home-register-form { grid-template-columns: minmax(0, 1fr) !important; }
+  #homePage .home-register-form .button { grid-column: 1 !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #memberActions .home-option { transition: none !important; }
+  #memberActions .home-option:hover { transform: none !important; }
+}
+
+
+/* FINAL CONTRAST AND RESPONSIVE PASS (17 Nov 2026) */
+.topbar-nav { display: none !important; }
+#memberActions.home-actions-section {
+  width: min(calc(100% - 48px), 720px) !important;
+  max-width: 720px !important;
+  margin: 0 auto !important;
+  padding: 28px 0 18px !important;
+}
+#homePage .home-kicker { color: #f2ffb8 !important; }
+#homePage .home-kicker b { color: #ffffff !important; }
+#homePage .home-promo-description { color: #ffffff !important; }
+#homePage .home-promo-support { color: #eef0ff !important; }
+#homePage .home-hero-proof strong { color: #ffffff !important; }
+#homePage .home-hero-proof small { color: #e8ebff !important; }
+#homePage .home-quick-heading .section-kicker { color: #3428c9 !important; }
+#homePage .home-quick-heading h2 { color: #17182f !important; }
+#homePage .home-quick-heading p { color: #50586f !important; }
+#homePage .home-quick-footnote { color: #515970 !important; }
+#homePage .home-quick-footnote a { color: #3026c9 !important; }
+#homePage .home-section-heading > p { color: #50586f !important; }
+#homePage .home-process-card p { color: #50586f !important; }
+#homePage .home-footnote { color: #656b80 !important; }
+#homePage .benefit-card-main p,
+#homePage .benefit-card-blue p { color: rgba(255,255,255,.88) !important; }
+#homePage .benefit-card-light p { color: #50566b !important; }
+.hero-copy .eyebrow,
+.customer-login-visual .eyebrow {
+  color: #f4ffd4 !important;
+  border-color: rgba(255,255,255,.42) !important;
+  background: rgba(9, 11, 59, .42) !important;
+}
+.hero-copy .hero-description,
+.customer-login-visual > p { color: #f0f2ff !important; }
+.hero-copy .hero-signature { color: #e6eaff !important; }
+.register-perk-highlight small { color: rgba(255,255,255,.9) !important; }
+#memberActions .home-option-primary .home-option-copy small { color: rgba(255,255,255,.94) !important; }
+#memberActions .home-option-member .home-option-copy small { color: #596177 !important; }
+#memberActions .home-option-admin .home-option-copy small { color: rgba(255,255,255,.9) !important; }
+#memberActions .home-option:focus-visible { outline: 3px solid #c8ff00 !important; outline-offset: 3px !important; }
+@media (max-width: 760px) {
+  #memberActions.home-actions-section { width: calc(100% - 30px) !important; padding: 22px 0 14px !important; }
+  #memberActions .home-option { min-height: 72px !important; }
+}
+@media (max-width: 360px) {
+  #memberActions .home-option { grid-template-columns: 34px minmax(0,1fr) 18px !important; gap: 8px !important; padding: 10px !important; }
+  #memberActions .home-option-number { width: 33px !important; height: 33px !important; }
+  #memberActions .home-option-copy strong { font-size: 10px !important; }
+  #memberActions .home-option-copy small { font-size: 9px !important; }
+}
